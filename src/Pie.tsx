@@ -16,8 +16,8 @@ export function Pie(props: PropTypes) {
       });
     }, [{ circOffset: 0, circSlice: 0, label: '', color: "" }]);
 
-  const slices = sliceViewModels.map((m: SliceViewModel) => ([
-    <circle r={props.radius / 2} cx={props.radius} cy={props.radius} fill="transparent" stroke={m.color} strokeWidth={props.radius} strokeDasharray={`0 ${m.circOffset} ${m.circSlice} 500`} />,
+  const slices = sliceViewModels.map((m: SliceViewModel, i) => ([
+    <circle key={i} r={props.radius / 2} cx={props.radius} cy={props.radius} fill="transparent" stroke={m.color} strokeWidth={props.radius} strokeDasharray={`0 ${m.circOffset} ${m.circSlice} 500`} />,
   ]));
 
   const diameter = props.radius * 2;
@@ -58,7 +58,7 @@ function Legend(props: {left: number, sliceViewModels: SliceViewModel[]}) {
   
   const legend = props.sliceViewModels
     .reduce(toLegendLabel, [])
-    .map((m: any) => <LegendLabel x={m.x} y={m.y} color={m.color} label={m.label} />);
+    .map((m: any, i) => <LegendLabel key={i} x={m.x} y={m.y} color={m.color} label={m.label} />);
   
     return <React.Fragment>
       {legend}
@@ -68,7 +68,6 @@ function Legend(props: {left: number, sliceViewModels: SliceViewModel[]}) {
 
 function LegendLabel(props: {x: number, y: number, color: string, label: string}): JSX.Element {
   const isMultipleOf3 = (x: number) => {
-    // console.log(x)
     return x !== 0 && x % 3 === 0
   }
   
@@ -86,7 +85,7 @@ function LegendLabel(props: {x: number, y: number, color: string, label: string}
   return (
     <React.Fragment>
       {lines.map((l, i) => (
-        <text x={props.x + 50} y="35%" className={"Legend-label"} dy={`${props.y + (40 * i)}`} fill={`${props.color}`} stroke={`${props.color}`} text-anchor="left">{`${l}`}</text>
+        <text key={i} x={props.x + 50} y="35%" className={"Legend-label"} dy={`${props.y + (40 * i)}`} fill={`${props.color}`} stroke={`${props.color}`} textAnchor="left">{`${l}`}</text>
       ))}
     </React.Fragment>
     )

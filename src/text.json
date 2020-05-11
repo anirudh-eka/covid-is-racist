@@ -1,0 +1,34 @@
+{
+"content": [
+{
+    "type": "text",
+    "data": "The assailant is totally color blind and yet, it disproportionately murders people of color in the United States. Sadly of course, millions of white people have lost their lives to the virus too. In fact non-hispanic whites make up the most deaths according to the CDC."
+},
+{
+    "type": "chart",
+    "data": "covid-demographic-pie"
+},
+{ 
+    "type" : "text", 
+    "data" :"So where's the racism? Well the key word is *disproportionate*. If white people make up 50% of the population, they should make up 50% of the deaths. Thats not the case. This is the breakdown of demographics in the United States:" 
+},
+{
+    "type": "chart",
+    "data": "us-demographic-pie"
+},
+{ 
+    "type" : "text", 
+    "data" : "Though whites make up the majority of Covid deaths, they are still under-affected."
+},
+
+{ 
+    "type" : "text", 
+    "data" : "Corona doesn't intend to be prejudiced against people of color. In fact it can't *intend* to do anything. This is how systemic racism acts. Much like a virus, it infects even a thing as neutral as covid in order to propogate itself. The classic image of racism is far too limited to understand it's behavior. An outright racist Klansman did not decide covid, or for that matter, any health condition should disproportionately affect people of color. Our health care system, our city planning, class, work place conditions, even (most controversially) genetics decide. Racism arises from what seem like race neutral factors."
+},
+{ 
+    "type" : "text", 
+    "data" : "Typically, racism is thought of as a full coherent thought in a person's mind to treat someone differently based on what they look like. Truth is today most racially biased results don't come from this limited image of a Klansman. A Klansman didn't decide covid, or for that matter, any health condition should disproportionately affect people of color. Our health care system, our city planning, class, work place conditions, even (most controversially) genetics decide. Racism arises from what seem like race neutral factors. Behind each of these systems there are countless human decisions that might not in isolation seem linked to race, but clearly contributing to a racist system. In this way, we are all racist.  ...what is a race issue"
+}
+]
+}
+ 
