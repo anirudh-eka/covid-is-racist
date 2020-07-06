@@ -11,14 +11,25 @@ export function Pie(props: PropTypes) {
       return a.concat({
         circOffset: last.circOffset + last.circSlice,
         circSlice: sliceCirc,
-        label: s.name,
+        label: `${s.name} (${(s.ratio * 100).toFixed(1)}%)`,
         color: colors[a.length - 1]
       });
     }, [{ circOffset: 0, circSlice: 0, label: '', color: "" }]);
 
-  const slices = sliceViewModels.map((m: SliceViewModel, i) => ([
-    <circle key={i} r={props.radius / 2} cx={props.radius} cy={props.radius} fill="transparent" stroke={m.color} strokeWidth={props.radius} strokeDasharray={`0 ${m.circOffset} ${m.circSlice} 500`} />,
-  ]));
+  const slices = sliceViewModels.map((m: SliceViewModel, i) => {
+    return [
+    <circle 
+      key={i} 
+      r={props.radius / 2} 
+      cx={props.radius} 
+      cy={props.radius} 
+      fill="transparent" 
+      stroke={m.color} 
+      strokeWidth={props.radius} 
+      strokeDasharray={`0 ${m.circOffset} ${m.circSlice} 500`} />,
+    ]
+  }
+  );
 
   const diameter = props.radius * 2;
 
@@ -85,7 +96,7 @@ function LegendLabel(props: {x: number, y: number, color: string, label: string}
   return (
     <React.Fragment>
       {lines.map((l, i) => (
-        <text key={i} x={props.x + 50} y="35%" className={"Legend-label"} dy={`${props.y + (40 * i)}`} fill={`${props.color}`} stroke={`${props.color}`} textAnchor="left">{`${l}`}</text>
+        <text key={i} x={props.x + 50} y="30%" className={"Legend-label"} dy={`${props.y + (40 * i)}`} fill={`${props.color}`} stroke={`${props.color}`} textAnchor="left">{`${l}`}</text>
       ))}
     </React.Fragment>
     )
