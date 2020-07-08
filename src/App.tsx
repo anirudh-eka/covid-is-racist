@@ -23,7 +23,7 @@ function App() {
   return (
     <Slides onWidthResize={setSlidesWidth} >
       <Slide>
-        <h1>{`Total Covid Deaths by Demographic as of ${date}`}</h1>
+        <h1>{`Total Covid-19 Deaths by Demographic as of ${date}`}</h1>
         <figure>
           <Pie chartWidth={slidesWidth} data={covidDeathsData} />
           <figcaption>
