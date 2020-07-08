@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/covid-is-racist/precache-manifest.e0716c113a3d6668273586d70d025dc1.js"
+  "/covid-is-racist/precache-manifest.60f58a402653ab647061fb62fb3d499c.js"
 );
 
 self.addEventListener('message', (event) => {
