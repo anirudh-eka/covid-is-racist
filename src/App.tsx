@@ -20,7 +20,6 @@ function App() {
     })
   }, [])
 
-  console.log('slides width ', slidesWidth)
   return (
     <Slides onWidthResize={setSlidesWidth} >
       <Slide>
@@ -35,7 +34,6 @@ function App() {
       <Slide>
         <h1>Somehow,</h1>
         <p><em>Covid-19 disproportionately targets people of color</em> without having eyes. That is no accident.</p>
-        
       </Slide>
       <Slide>
         <h1>If our system can teach a virus to see race</h1>
@@ -85,7 +83,6 @@ function Slides(props: {children: React.ReactElement[], onWidthResize?: Function
 
   useEffect(() => {
     if(target && target.current) {
-      console.log(target.current.getBoundingClientRect())
       const { width } = target.current.getBoundingClientRect()
       props.onWidthResize && props.onWidthResize(width)
     }
