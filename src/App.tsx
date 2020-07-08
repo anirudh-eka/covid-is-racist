@@ -38,7 +38,7 @@ function App() {
       </Slide>
       <Slide>
         <h1>If our system can teach a virus to see race</h1>
-        <p><em>then why is it so surprising that the police aren't color-blind?</em> Honestly, they never stood a chance.</p>
+        <p><em>then it's no surprise that the police aren't color-blind.</em> Honestly, they never stood a chance.</p>
       </Slide>
     </Slides>
   );
