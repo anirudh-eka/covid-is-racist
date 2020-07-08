@@ -32,12 +32,13 @@ function App() {
         </figure>
       </Slide>
       <Slide>
-        <h1>Somehow,</h1>
-        <p><em>Covid-19 disproportionately targets people of color</em> without having eyes. That is no accident.</p>
+        <p>
+          Non-Hispanic whites make up roughly <a href="https://data.census.gov/cedsci/table?q=United%20States&g=0100000US&hidePreview=true&tid=ACSDP1Y2018.DP05&table=DP05">60 percent of the population.</a> So as you can see from the chart, <em>Covid-19 disproportionately targets people of color.</em> And it does it without eyes. This begs the question:
+        </p>
       </Slide>
       <Slide>
         <h1>If our system can teach a virus to see race</h1>
-        <p><em>then why is it so surprising that you aren't color-blind?</em> Honestly, you never stood a chance.</p>
+        <p><em>then why is it so surprising that the police aren't color-blind?</em> Honestly, they never stood a chance.</p>
       </Slide>
     </Slides>
   );
