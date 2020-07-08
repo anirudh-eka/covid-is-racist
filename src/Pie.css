@@ -1,0 +1,10 @@
+.pie-legend {
+    font-weight: normal;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.pie-legend li {
+    padding-left: 10px;
+    font-size: 1em;
+}

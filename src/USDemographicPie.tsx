@@ -11,5 +11,5 @@ export default function USDemographicPie() {
         { name: "Other", ratio: 0.03}
       ]
     
-    return <Pie radius={300} data={totalUSDemographics} />
+    return <Pie chartWidth={300} data={totalUSDemographics} />
 }

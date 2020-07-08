@@ -75,9 +75,9 @@ body {
 
 .container {
   color: #333;
-  max-width: 33em;
+  width: 33em;
+  max-width: 95vw;
   margin: 0em auto;
-  padding: 0em 0.5em;
 }
 
 p {

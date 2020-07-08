@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Children } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.css'
 import { Pie } from './Pie';
 
@@ -7,6 +7,7 @@ function App() {
 
   const [date, setDate] = useState<string|null>(null)
   const [covidDeathsData, setCovidDeathsData] = useState([])
+  const [slidesWidth, setSlidesWidth] = useState(0)
 
   useEffect(() => {
     fetch("https://data.cdc.gov/resource/pj7m-y5uh.json")
@@ -19,12 +20,13 @@ function App() {
     })
   }, [])
 
+  console.log('slides width ', slidesWidth)
   return (
-    <Slides>
+    <Slides onWidthResize={setSlidesWidth} >
       <Slide>
         <h1>{`Total Covid Deaths by Demographic as of ${date}`}</h1>
         <figure>
-          <Pie radius={300} data={covidDeathsData} />
+          <Pie chartWidth={slidesWidth} data={covidDeathsData} />
           <figcaption>
             Source: <a href="https://data.cdc.gov/NCHS/Provisional-Death-Counts-for-Coronavirus-Disease-C/pj7m-y5uh">CDC</a>
           </figcaption>
@@ -32,11 +34,12 @@ function App() {
       </Slide>
       <Slide>
         <h1>Somehow,</h1>
-        <p><em>Covid-19 disproportionately targets people of color</em> eventhough it doesn't have eyes.</p>
+        <p><em>Covid-19 disproportionately targets people of color</em> without having eyes. That is no accident.</p>
+        
       </Slide>
       <Slide>
-        <h1>If our system can make the actions of a virus racist</h1>
-        <p><em>then what chances do we have in being color-blind?</em></p>
+        <h1>If our system can teach a virus to see race</h1>
+        <p><em>then why is it so surprising that you aren't color-blind?</em> Honestly, you never stood a chance.</p>
       </Slide>
     </Slides>
   );
@@ -62,7 +65,7 @@ function Slide(props: {children: any, last?: boolean}) {
   
   const footer = !props.last 
   ? (<footer className="slide-footer">
-      <p>Next</p>
+      <p>↓</p>
     </footer>)
   : (<footer className="slide-footer-end">
     <div className="period"></div>
@@ -77,10 +80,19 @@ function Slide(props: {children: any, last?: boolean}) {
 }
 
 
-function Slides(props: {children: React.ReactElement[]}) {
-  // props.children.map((c) => React.cloneElement(c))
+function Slides(props: {children: React.ReactElement[], onWidthResize?: Function}) {
+  const target: any = useRef(null)
+
+  useEffect(() => {
+    if(target && target.current) {
+      console.log(target.current.getBoundingClientRect())
+      const { width } = target.current.getBoundingClientRect()
+      props.onWidthResize && props.onWidthResize(width)
+    }
+  }, [])
+
   return (
-    <div className="container">
+    <div className="container" ref={target} >
       {props.children.map((c, i) => {
         return i + 1 === props.children.length ? React.cloneElement(c, {last: true}) : c
         })
