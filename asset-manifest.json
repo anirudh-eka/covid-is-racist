@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/covid-is-racist/static/css/main.68831701.chunk.css",
-    "main.js": "/covid-is-racist/static/js/main.58bc68ec.chunk.js",
-    "main.js.map": "/covid-is-racist/static/js/main.58bc68ec.chunk.js.map",
+    "main.js": "/covid-is-racist/static/js/main.28b776b5.chunk.js",
+    "main.js.map": "/covid-is-racist/static/js/main.28b776b5.chunk.js.map",
     "runtime-main.js": "/covid-is-racist/static/js/runtime-main.e75b5d17.js",
     "runtime-main.js.map": "/covid-is-racist/static/js/runtime-main.e75b5d17.js.map",
     "static/js/2.86fd04b0.chunk.js": "/covid-is-racist/static/js/2.86fd04b0.chunk.js",
     "static/js/2.86fd04b0.chunk.js.map": "/covid-is-racist/static/js/2.86fd04b0.chunk.js.map",
     "index.html": "/covid-is-racist/index.html",
-    "precache-manifest.b660bb07a7ba5e24ee9eabe91f603443.js": "/covid-is-racist/precache-manifest.b660bb07a7ba5e24ee9eabe91f603443.js",
+    "precache-manifest.e0716c113a3d6668273586d70d025dc1.js": "/covid-is-racist/precache-manifest.e0716c113a3d6668273586d70d025dc1.js",
     "service-worker.js": "/covid-is-racist/service-worker.js",
     "static/css/main.68831701.chunk.css.map": "/covid-is-racist/static/css/main.68831701.chunk.css.map",
     "static/js/2.86fd04b0.chunk.js.LICENSE.txt": "/covid-is-racist/static/js/2.86fd04b0.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e75b5d17.js",
     "static/js/2.86fd04b0.chunk.js",
     "static/css/main.68831701.chunk.css",
-    "static/js/main.58bc68ec.chunk.js"
+    "static/js/main.28b776b5.chunk.js"
   ]
 }

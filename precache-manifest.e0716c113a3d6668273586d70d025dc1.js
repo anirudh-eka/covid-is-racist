@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9ca80b2960d4883232bd99fb1cf7dfa1",
+    "revision": "d411d6809a653f99f233a46de7b4ce5c",
     "url": "/covid-is-racist/index.html"
   },
   {
-    "revision": "7c9e714699271ca053aa",
+    "revision": "fd3d85e344d2892c7037",
     "url": "/covid-is-racist/static/css/main.68831701.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/covid-is-racist/static/js/2.86fd04b0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7c9e714699271ca053aa",
-    "url": "/covid-is-racist/static/js/main.58bc68ec.chunk.js"
+    "revision": "fd3d85e344d2892c7037",
+    "url": "/covid-is-racist/static/js/main.28b776b5.chunk.js"
   },
   {
     "revision": "5055ad326b483b31119a",
